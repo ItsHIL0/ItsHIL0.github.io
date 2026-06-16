@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════
+       NAVIGATION
+  ═══════════════════════════════════════ -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <div class="nav-logo">
+        <span class="prompt">&gt;_</span>
+        <span class="logo-name">YOUR_NAME</span>
+        <span class="cursor-blink">█</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#" class="nav-btn active" data-target="home">~/home</a></li>
+        <li><a href="#" class="nav-btn" data-target="research">~/research</a></li>
+        <li><a href="#" class="nav-btn" data-target="experience">~/experience</a></li>
+        <li><a href="#" class="nav-btn" data-target="projects">~/projects</a></li>
+        <li><a href="#" class="nav-btn" data-target="skills">~/skills</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════
+       HOME SECTION
+  ═══════════════════════════════════════ -->
+  <section id="home" class="page active">
+
+    <!-- Animated background canvas -->
+    <canvas id="matrix-canvas"></canvas>
+
+    <div class="hero">
+      <div class="hero-content">
+        <p class="hero-label">// initializing portfolio.exe</p>
+        <h1 class="hero-name">Your Name</h1>
+        <p class="hero-sub">
+          <span class="typed-text" id="typed"></span><span class="cursor-blink">█</span>
+        </p>
+        <p class="hero-bio">
+          <!-- ✏️ EDIT: Replace this with a 2–3 sentence bio about yourself -->
+          Computer Science student at [Your University] with a focus on cybersecurity and systems programming.
+          I build tools, break things on purpose, and document everything in between.
+        </p>
+        <div class="hero-actions">
+          <a href="#" class="btn-primary" data-target="projects" onclick="switchPage('projects'); return false;">View Projects</a>
+          <a href="mailto:youremail@example.com" class="btn-ghost">Contact Me</a>
+        </div>
+        <div class="hero-stats">
+          <!-- ✏️ EDIT: Update these numbers to reflect your actual stats -->
+          <div class="stat">
+            <span class="stat-num">12</span>
+            <span class="stat-label">Projects</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-num">3</span>
+            <span class="stat-label">Research Papers</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-num">2</span>
+            <span class="stat-label">Internships</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       RESEARCH SECTION
+  ═══════════════════════════════════════ -->
+  <section id="research" class="page">
+    <div class="page-inner">
+
+      <div class="section-header">
+        <span class="section-comment">/* research &amp; publications */</span>
+        <h2 class="section-title">Research</h2>
+      </div>
+
+      <div class="cards-grid">
+
+        <!-- ✏️ EDIT: Duplicate this card block to add more research entries -->
+        <div class="card research-card">
+          <div class="card-top">
+            <span class="card-tag">Cybersecurity</span>
+            <span class="card-year">2024</span>
+          </div>
+          <h3 class="card-title">Title of Your Research Paper or Project</h3>
+          <p class="card-desc">
+            A brief abstract or summary of what this research covers. What problem did you investigate?
+            What was your methodology? Keep it to 2–3 sentences — enough to intrigue, not overwhelm.
+          </p>
+          <div class="card-meta">
+            <span class="meta-label">Advisor:</span>
+            <span class="meta-val">Dr. Advisor Name</span>
+          </div>
+          <div class="card-meta">
+            <span class="meta-label">Published in:</span>
+            <span class="meta-val">Conference / Journal Name</span>
+          </div>
+          <div class="card-links">
+            <a href="#" class="link-pill">[ Paper ]</a>
+            <a href="#" class="link-pill">[ Slides ]</a>
+          </div>
+        </div>
+
+        <div class="card research-card">
+          <div class="card-top">
+            <span class="card-tag">Systems</span>
+            <span class="card-year">2023</span>
+          </div>
+          <h3 class="card-title">Another Research Topic or Ongoing Study</h3>
+          <p class="card-desc">
+            Describe the focus of this research. Who did you collaborate with? What tools or datasets
+            were involved? What conclusions or hypotheses emerged from your work?
+          </p>
+          <div class="card-meta">
+            <span class="meta-label">Advisor:</span>
+            <span class="meta-val">Dr. Advisor Name</span>
+          </div>
+          <div class="card-meta">
+            <span class="meta-label">Status:</span>
+            <span class="meta-val status-active">Ongoing</span>
+          </div>
+          <div class="card-links">
+            <a href="#" class="link-pill">[ GitHub ]</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       EXPERIENCE SECTION
+  ═══════════════════════════════════════ -->
+  <section id="experience" class="page">
+    <div class="page-inner">
+
+      <div class="section-header">
+        <span class="section-comment">/* work &amp; internship history */</span>
+        <h2 class="section-title">Experience</h2>
+      </div>
+
+      <div class="timeline">
+
+        <!-- ✏️ EDIT: Duplicate .timeline-item to add more jobs -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="tl-header">
+              <div>
+                <h3 class="tl-role">Job Title / Role</h3>
+                <p class="tl-company">Company or Organization Name</p>
+              </div>
+              <span class="tl-date">May 2024 — Aug 2024</span>
+            </div>
+            <ul class="tl-bullets">
+              <!-- ✏️ EDIT: Replace with your actual bullet points -->
+              <li>Describe a key responsibility or achievement using action verbs. Quantify where possible.</li>
+              <li>Another accomplishment — tools you used, problems you solved, impact you made.</li>
+              <li>A third bullet showcasing a skill or technology relevant to your field.</li>
+            </ul>
+            <div class="tl-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Linux</span>
+              <span class="tag">AWS</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="tl-header">
+              <div>
+                <h3 class="tl-role">Another Job Title</h3>
+                <p class="tl-company">Another Company</p>
+              </div>
+              <span class="tl-date">Jan 2024 — May 2024</span>
+            </div>
+            <ul class="tl-bullets">
+              <li>What did you work on here? Be specific about the technologies and methodologies.</li>
+              <li>How did your work contribute to the team or product? Mention scale where relevant.</li>
+            </ul>
+            <div class="tl-tags">
+              <span class="tag">C++</span>
+              <span class="tag">Git</span>
+              <span class="tag">Docker</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="tl-header">
+              <div>
+                <h3 class="tl-role">Teaching Assistant / Research Assistant</h3>
+                <p class="tl-company">Your University</p>
+              </div>
+              <span class="tl-date">Aug 2023 — Dec 2023</span>
+            </div>
+            <ul class="tl-bullets">
+              <li>Academic roles count as experience — describe what you taught or assisted with.</li>
+              <li>Any grading, tutoring, lab sessions, or research support worth highlighting.</li>
+            </ul>
+            <div class="tl-tags">
+              <span class="tag">Teaching</span>
+              <span class="tag">Research</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       PROJECTS SECTION
+  ═══════════════════════════════════════ -->
+  <section id="projects" class="page">
+    <div class="page-inner">
+
+      <div class="section-header">
+        <span class="section-comment">/* things i've built */</span>
+        <h2 class="section-title">Projects</h2>
+      </div>
+
+      <div class="cards-grid">
+
+        <!-- ✏️ EDIT: Duplicate this card for each project -->
+        <div class="card project-card">
+          <div class="card-top">
+            <span class="card-tag">Security</span>
+            <span class="proj-status status-active">Live</span>
+          </div>
+          <h3 class="card-title">Project Name</h3>
+          <p class="card-desc">
+            What does this project do? Describe the problem it solves and why you built it.
+            Keep it to 2–3 sentences. Mention any interesting technical challenges.
+          </p>
+          <div class="tech-stack">
+            <span class="tag">Python</span>
+            <span class="tag">Flask</span>
+            <span class="tag">SQLite</span>
+          </div>
+          <div class="card-links">
+            <a href="#" class="link-pill">[ GitHub ]</a>
+            <a href="#" class="link-pill">[ Live Demo ]</a>
+          </div>
+        </div>
+
+        <div class="card project-card">
+          <div class="card-top">
+            <span class="card-tag">Systems</span>
+            <span class="proj-status">Archived</span>
+          </div>
+          <h3 class="card-title">Another Project</h3>
+          <p class="card-desc">
+            Describe what makes this project interesting from a technical perspective.
+            What did you learn while building it? Any architecture decisions worth mentioning?
+          </p>
+          <div class="tech-stack">
+            <span class="tag">C</span>
+            <span class="tag">Assembly</span>
+            <span class="tag">GDB</span>
+          </div>
+          <div class="card-links">
+            <a href="#" class="link-pill">[ GitHub ]</a>
+          </div>
+        </div>
+
+        <div class="card project-card">
+          <div class="card-top">
+            <span class="card-tag">Networking</span>
+            <span class="proj-status status-wip">In Progress</span>
+          </div>
+          <h3 class="card-title">Work-in-Progress Project</h3>
+          <p class="card-desc">
+            Even unfinished projects are worth showing. Describe your goal and current progress.
+            What have you built so far, and what's left to implement?
+          </p>
+          <div class="tech-stack">
+            <span class="tag">Rust</span>
+            <span class="tag">TCP/IP</span>
+          </div>
+          <div class="card-links">
+            <a href="#" class="link-pill">[ GitHub ]</a>
+          </div>
+        </div>
+
+        <div class="card project-card">
+          <div class="card-top">
+            <span class="card-tag">ML / AI</span>
+            <span class="proj-status status-active">Live</span>
+          </div>
+          <h3 class="card-title">Fourth Project Slot</h3>
+          <p class="card-desc">
+            A brief, honest description of what this does and why it was built.
+            Don't oversell — let the GitHub speak for itself.
+          </p>
+          <div class="tech-stack">
+            <span class="tag">Python</span>
+            <span class="tag">PyTorch</span>
+          </div>
+          <div class="card-links">
+            <a href="#" class="link-pill">[ GitHub ]</a>
+            <a href="#" class="link-pill">[ Write-up ]</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SKILLS SECTION
+  ═══════════════════════════════════════ -->
+  <section id="skills" class="page">
+    <div class="page-inner">
+
+      <div class="section-header">
+        <span class="section-comment">/* tools &amp; technologies */</span>
+        <h2 class="section-title">Skills</h2>
+      </div>
+
+      <div class="skills-layout">
+
+        <!-- ✏️ EDIT: Update each category and its skill bars -->
+        <div class="skill-group">
+          <h3 class="skill-group-title">&lt;Languages /&gt;</h3>
+          <div class="skill-list">
+            <div class="skill-row">
+              <span class="skill-name">Python</span>
+              <div class="skill-bar"><div class="skill-fill" style="--pct: 90%"></div></div>
+              <span class="skill-pct">90%</span>
+            </div>
+            <div class="skill-row">
+              <span class="skill-name">C / C++</span>
+              <div class="skill-bar"><div class="skill-fill" style="--pct: 75%"></div></div>
+              <span class="skill-pct">75%</span>
+            </div>
+            <div class="skill-row">
+              <span class="skill-name">JavaScript</span>
+              <div class="skill-bar"><div class="skill-fill" style="--pct: 65%"></div></div>
+              <span class="skill-pct">65%</span>
+            </div>
+            <div class="skill-row">
+              <span class="skill-name">Rust</span>
+              <div class="skill-bar"><div class="skill-fill" style="--pct: 40%"></div></div>
+              <span class="skill-pct">40%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3 class="skill-group-title">&lt;Security /&gt;</h3>
+          <div class="skill-list">
+            <div class="skill-row">
+              <span class="skill-name">Penetration Testing</span>
+              <div class="skill-bar"><div class="skill-fill" style="--pct: 70%"></div></div>
+              <span class="skill-pct">70%</span>
+            </div>
+            <div class="skill-row">
+              <span class="skill-name">Network Analysis</span>
+              <div class="skill-bar"><div class="skill-fill" style="--pct: 80%"></div></div>
+              <span class="skill-pct">80%</span>
+            </div>
+            <div class="skill-row">
+              <span class="skill-name">Reverse Engineering</span>
+              <div class="skill-bar"><div class="skill-fill" style="--pct: 55%"></div></div>
+              <span class="skill-pct">55%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3 class="skill-group-title">&lt;Tools /&gt;</h3>
+          <div class="skill-list">
+            <div class="skill-row">
+              <span class="skill-name">Linux / Bash</span>
+              <div class="skill-bar"><div class="skill-fill" style="--pct: 85%"></div></div>
+              <span class="skill-pct">85%</span>
+            </div>
+            <div class="skill-row">
+              <span class="skill-name">Git / GitHub</span>
+              <div class="skill-bar"><div class="skill-fill" style="--pct: 90%"></div></div>
+              <span class="skill-pct">90%</span>
+            </div>
+            <div class="skill-row">
+              <span class="skill-name">Docker</span>
+              <div class="skill-bar"><div class="skill-fill" style="--pct: 60%"></div></div>
+              <span class="skill-pct">60%</span>
+            </div>
+            <div class="skill-row">
+              <span class="skill-name">Wireshark / Nmap</span>
+              <div class="skill-bar"><div class="skill-fill" style="--pct: 75%"></div></div>
+              <span class="skill-pct">75%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3 class="skill-group-title">&lt;Concepts /&gt;</h3>
+          <div class="tag-cloud">
+            <!-- ✏️ EDIT: Add/remove concept tags freely -->
+            <span class="tag-lg">Operating Systems</span>
+            <span class="tag-lg">Computer Architecture</span>
+            <span class="tag-lg">Cryptography</span>
+            <span class="tag-lg">Data Structures</span>
+            <span class="tag-lg">TCP/IP Networking</span>
+            <span class="tag-lg">Algorithms</span>
+            <span class="tag-lg">Malware Analysis</span>
+            <span class="tag-lg">Discrete Math</span>
+            <span class="tag-lg">Database Systems</span>
+            <span class="tag-lg">Machine Learning</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════ -->
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-text">
+        <span class="prompt">&gt;_</span>
+        <!-- ✏️ EDIT: Update your name and links below -->
+        Built by <strong>Your Name</strong> · Hosted on GitHub Pages
+      </p>
+      <div class="footer-links">
+        <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+        <a href="mailto:youremail@example.com">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
